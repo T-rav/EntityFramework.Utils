@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>TddBuddy.EntityFramework.Utils</id>
+    <id>TddBuddy.EntityFramework.Utils.DotNet</id>
     <version>1.0.0</version>
     <title>EntityFramework Utils - DotNet</title>
     <authors>TddBuddy</authors>
