@@ -67,15 +67,27 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="TddBuddy.SpeedySqlLocalDb, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\TddBuddy.SpeedySqlLocalDb.1.1.2\lib\net45\TddBuddy.SpeedySqlLocalDb.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\CustomerDbContextFactory.cs" />
+    <Compile Include="CreatedAndModifiedInterceptorTests.cs" />
     <Compile Include="DateTimeProviderTests.cs" />
-    <Compile Include="EntityFrameworkDataChunkerTests.cs" />
+    <Compile Include="ExampleDb\Customer.cs" />
+    <Compile Include="Context\CustomerDbContext.cs" />
+    <Compile Include="ExampleDb\CustomerRepository.cs" />
+    <Compile Include="ExampleDb\ICustomerRepository.cs" />
+    <Compile Include="Migrations\201709061034030_Customer_AddedEntity.cs" />
+    <Compile Include="Migrations\201709061034030_Customer_AddedEntity.Designer.cs">
+      <DependentUpon>201709061034030_Customer_AddedEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +102,11 @@
       <Project>{1d80435c-f9aa-4c34-9967-0a1562006e00}</Project>
       <Name>TddBuddy.EntityFramework.Utils</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201709061034030_Customer_AddedEntity.resx">
+      <DependentUpon>201709061034030_Customer_AddedEntity.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="RealClean" AfterTargets="Clean">

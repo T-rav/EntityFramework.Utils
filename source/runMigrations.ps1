@@ -1,0 +1,2 @@
+Write-Host "Running migrations from TddBuddy.EntityFramework.Utils.Tests using connection string form TddBuddy.EntityFramework.Utils.Tests" -foregroundcolor "yellow"
+Update-Database -ProjectName TddBuddy.EntityFramework.Utils.Tests -StartupProjectName TddBuddy.EntityFramework.Utils.Tests
