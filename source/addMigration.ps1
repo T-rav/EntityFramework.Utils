@@ -1,1 +1,0 @@
-Add-Migration -ProjectName TddBuddy.EntityFramework.Utils.Tests -StartupProjectName TddBuddy.EntityFramework.Utils.Tests
