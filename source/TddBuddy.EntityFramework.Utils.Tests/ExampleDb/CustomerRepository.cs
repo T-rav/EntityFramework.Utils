@@ -12,9 +12,9 @@ namespace EntityFramework.Utils.Tests.ExampleDb
             _dbContext = dbContext;
         }
 
-        public void Create(Customer customer)
+        public void Create(Customer entry)
         {
-            _dbContext.Customers.Add(customer);
+            _dbContext.Customers.Add(entry);
         }
 
         public void Save()

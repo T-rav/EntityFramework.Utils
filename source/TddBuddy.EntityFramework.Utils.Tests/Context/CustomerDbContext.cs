@@ -14,16 +14,9 @@ namespace EntityFramework.Utils.Tests.Context
 
         public DateTime DateTimeNow => _dateTimeProvider.DateTimeNow;
 
-        public CustomerDbContext(IDateTimeProvider dateTimeProvider) : base("ExampleDb")
-        {
-            _dateTimeProvider = dateTimeProvider;
-            Database.SetInitializer<CustomerDbContext>(null);
-        }
-
         public CustomerDbContext(DbConnection connection, IDateTimeProvider dateTimeProvider) : base(connection, false)
         {
             _dateTimeProvider = dateTimeProvider;
-            Database.SetInitializer<CustomerDbContext>(null);
         }
 
         public IDbSet<Customer> Customers { get; set; }
